@@ -11,6 +11,16 @@ A Retrieval-Augmented Generation (RAG) pipeline that scores how well a resume ma
 5. **Retrieve** — given a job description, find the resume chunks most semantically relevant to it.
 6. **Score** — feed the retrieved chunks + job description to Gemini, which returns a 0–100 match score with a grounded explanation (the prompt explicitly constrains it to only use the retrieved excerpts, not general knowledge).
 
+## Technologies Used
+
+- Python
+- Google Gemini
+- Retrieval-Augmented Generation (RAG)
+- FAISS
+- RAGAS
+- Semantic Search
+- PDF/Text Parsing
+
 ## Status
 
 Core pipeline (steps 1–6 above) is implemented and working end to end, consolidated into a single reusable `pipeline.py` entry point (`analyze_resume()`), which every module below builds on.
